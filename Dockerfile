@@ -1,7 +1,6 @@
 # syntax=docker/dockerfile:1.4
 FROM directus/directus:10.12.1
 USER root
-RUN npm install pdfkit
 RUN corepack enable \
 && corepack prepare pnpm@8.7.6 --activate \
 && chown node:node /directus
