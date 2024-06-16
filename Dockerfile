@@ -3,7 +3,8 @@ FROM directus/directus:10.12.1
 USER root
 RUN corepack enable \
 && corepack prepare pnpm@8.7.6 --activate \
-&& chown node:node /directus
+&& chown node:node /directus \
+&& npm install pdfkit
 EXPOSE 8055
 USER node
 CMD : \
